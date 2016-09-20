@@ -1,6 +1,6 @@
 /*
-2016-09-21 ½Ç½À 2-5
-¡°2-5-out.txt¡± ÆÄÀÏ¿¡ ¿øÀÇ ¹ÝÁö¸§À» ÀÔ·Â ¹Þ¾Æ µÑ·¹¿Í ¸éÀûÀ» Ãâ·ÂÇÏ½Ã¿À
+2016-09-21 ì‹¤ìŠµ 2-5
+â€œ2-5-out.txtâ€ íŒŒì¼ì— ì›ì˜ ë°˜ì§€ë¦„ì„ ìž…ë ¥ ë°›ì•„ ë‘˜ë ˆì™€ ë©´ì ì„ ì¶œë ¥í•˜ì‹œì˜¤
 */
 
 #include <stdio.h>
@@ -10,29 +10,29 @@
 
 int main()
 {
-    // ÀåÄ¡ ¼±¾ð. (File Pointer)
+    // ìž¥ì¹˜ ì„ ì–¸. (File Pointer)
     FILE * fp;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) OPEN
-    //fp = fopen("2-5-out.txt", "w"); /* C Ç¥ÁØ */
-    fopen_s(&fp, "2-5-out.txt", "w"); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) OPEN
+    //fp = fopen("d:\\2-5-out.txt", "w"); /* C í‘œì¤€ */
+    fopen_s(&fp, "d:\\2-5-out.txt", "w"); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
 
-    printf("¿øÀÇ ¹ÝÁö¸§À» ÀÔ·ÂÇÏ¼¼¿ä : ");
+    printf("ì›ì˜ ë°˜ì§€ë¦„ì„ ìž…ë ¥í•˜ì„¸ìš” : ");
     
     double r;
-    scanf_s("%lf", &r); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    scanf_s("%lf", &r); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
     
     double cicum, area;
-    // µÑ·¹
+    // ë‘˜ë ˆ
     cicum = 2 * r * M_PI;
-    // ¸éÀû
+    // ë©´ì 
     area = pow(r,2) * M_PI;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) Á¶ÀÛ : ¾²±â
-    fprintf(fp, "¹ÝÁö¸§ %.2f ÀÎ ¿ø ÀÇ µÑ·¹´Â %.2f m ÀÌ°í, ¸éÀûÀº %.2f m^2 ÀÔ´Ï´Ù.\n", r, cicum, area);
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) ì¡°ìž‘ : ì“°ê¸°
+    fprintf(fp, "ë°˜ì§€ë¦„ %.2f ì¸ ì› ì˜ ë‘˜ë ˆëŠ” %.2f m ì´ê³ , ë©´ì ì€ %.2f m^2 ìž…ë‹ˆë‹¤.\n", r, cicum, area);
 
     
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) CLOSE
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) CLOSE
     fclose(fp);
 
     system("pause");
