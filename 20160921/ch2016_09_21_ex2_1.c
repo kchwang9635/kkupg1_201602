@@ -1,24 +1,24 @@
 /*
-2016-09-21 ½Ç½À 2-1
-¡°2-1-out.txt¡± ÆÄÀÏ¿¡ ÇÐ¹ø, ÀÌ¸§À» Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ½Ã¿À.
+2016-09-21 ì‹¤ìŠµ 2-1
+â€œ2-1-out.txtâ€ íŒŒì¼ì— í•™ë²ˆ, ì´ë¦„ì„ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ëž¨ì„ ìž‘ì„±í•˜ì‹œì˜¤.
 */
 
 #include <stdio.h>
 #include <Windows.h>
 int main()
 {
-    // ÀåÄ¡ ¼±¾ð. (File Pointer)
+    // ìž¥ì¹˜ ì„ ì–¸. (File Pointer)
     FILE * fp;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) OPEN
-    //fp = fopen("2-1-out.txt", "w"); /* C Ç¥ÁØ */
-    fopen_s(&fp, "2-1-out.txt", "w"); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) OPEN
+    //fp = fopen("d:\\2-1-out.txt", "w"); /* C í‘œì¤€ */
+    fopen_s(&fp, "d:\\2-1-out.txt", "w"); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) Á¶ÀÛ : ¾²±â
-    fprintf(fp, "ÇÐ¹ø:201609070900\n");
-    fprintf(fp, "ÀÌ¸§:È«±æµ¿\n");
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) ì¡°ìž‘ : ì“°ê¸°
+    fprintf(fp, "í•™ë²ˆ:201609070900\n");
+    fprintf(fp, "ì´ë¦„:í™ê¸¸ë™\n");
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) CLOSE
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) CLOSE
     fclose(fp);
 
     system("pause");
