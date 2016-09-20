@@ -1,6 +1,6 @@
 /*
-2016-09-21 ½Ç½À 2-3
-¹ÝÁö¸§ÀÌ 7mÀÎ ¿øÀÇ µÑ·¹¿Í ¸éÀûÀ» ¡°2-3-out.txt¡± ÆÄÀÏ¿¡ Ãâ·ÂÇÏ½Ã¿À
+2016-09-21 ì‹¤ìŠµ 2-3
+ë°˜ì§€ë¦„ì´ 7mì¸ ì›ì˜ ë‘˜ë ˆì™€ ë©´ì ì„ â€œ2-3-out.txtâ€ íŒŒì¼ì— ì¶œë ¥í•˜ì‹œì˜¤
 */
 
 #include <stdio.h>
@@ -10,25 +10,25 @@
 
 int main()
 {
-    // ÀåÄ¡ ¼±¾ð. (File Pointer)
+    // ìž¥ì¹˜ ì„ ì–¸. (File Pointer)
     FILE * fp;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) OPEN
-    //fp = fopen("2-3-out.txt", "w"); /* C Ç¥ÁØ */
-    fopen_s(&fp, "2-3-out.txt", "w"); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) OPEN
+    //fp = fopen("d:\\2-3-out.txt", "w"); /* C í‘œì¤€ */
+    fopen_s(&fp, "d:\\2-3-out.txt", "w"); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
 
     double r, cic, area;
-    //¹ÝÁö¸§
+    //ë°˜ì§€ë¦„
     r = 7.0;
-    //µÑ·¹
+    //ë‘˜ë ˆ
     cic = 2 * r * M_PI;
-    //¸éÀû
+    //ë©´ì 
     area = pow(r, 2) * M_PI;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) Á¶ÀÛ : ¾²±â
-    fprintf(fp, "¹ÝÁö¸§ %.2f m ÀÎ ¿ø ÀÇ µÑ·¹´Â %.2f m ÀÌ°í, ¸éÀûÀº %.2f m^2 ÀÔ´Ï´Ù.\n", r, cic, area);
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) ì¡°ìž‘ : ì“°ê¸°
+    fprintf(fp, "ë°˜ì§€ë¦„ %.2f m ì¸ ì› ì˜ ë‘˜ë ˆëŠ” %.2f m ì´ê³ , ë©´ì ì€ %.2f m^2 ìž…ë‹ˆë‹¤.\n", r, cic, area);
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) CLOSE
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) CLOSE
     fclose(fp);
 
     system("pause");
