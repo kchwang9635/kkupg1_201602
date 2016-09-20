@@ -1,6 +1,6 @@
 /*
-2016-09-21 ½Ç½À 2-6
-»ï°¢ÇüÀÇ ¹Øº¯°ú ³ôÀÌ¸¦ ÀÔ·Â ¹Þ¾Æ ³ÐÀÌ¸¦ ¡°2-6-out.txt¡± ÆÄÀÏ¿¡ Ãâ·ÂÇÏ½Ã¿À
+2016-09-21 ì‹¤ìŠµ 2-6
+ì‚¼ê°í˜•ì˜ ë°‘ë³€ê³¼ ë†’ì´ë¥¼ ìž…ë ¥ ë°›ì•„ ë„“ì´ë¥¼ â€œ2-6-out.txtâ€ íŒŒì¼ì— ì¶œë ¥í•˜ì‹œì˜¤
 */
 
 #include <stdio.h>
@@ -10,25 +10,25 @@
 
 int main()
 {
-    // ÀåÄ¡ ¼±¾ð. (File Pointer)
+    // ìž¥ì¹˜ ì„ ì–¸. (File Pointer)
     FILE * fp;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) OPEN
-    //fp = fopen("2-6-out.txt", "w"); /* C Ç¥ÁØ */
-    fopen_s(&fp, "2-6-out.txt", "w"); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) OPEN
+    //fp = fopen("d:\\2-6-out.txt", "w"); /* C í‘œì¤€ */
+    fopen_s(&fp, "d:\\2-6-out.txt", "w"); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
 
     double width, height, area;
-    printf("»ï°¢ÇüÀÇ ¹Øº¯ ±æÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä: ");
+    printf("ì‚¼ê°í˜•ì˜ ë°‘ë³€ ê¸¸ì´ë¥¼ ìž…ë ¥í•˜ì„¸ìš”: ");
     scanf_s("%lf", &width);
-    printf("»ï°¢ÇüÀÇ ³ôÀÌ¸¦ ÀÔ·ÂÇÏ¼¼¿ä : ");
+    printf("ì‚¼ê°í˜•ì˜ ë†’ì´ë¥¼ ìž…ë ¥í•˜ì„¸ìš” : ");
     scanf_s("%lf", &height);
 
     area = width * height / 2;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) Á¶ÀÛ : ¾²±â
-    fprintf(fp, "¹Øº¯ÀÌ %.2f ÀÌ°í ³ôÀÌ %.2f ÀÎ »ï°¢ÇüÀÇ ³ÐÀÌ´Â %.2f ÀÔ´Ï´Ù.\n", width, height, area);
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) ì¡°ìž‘ : ì“°ê¸°
+    fprintf(fp, "ë°‘ë³€ì´ %.2f ì´ê³  ë†’ì´ %.2f ì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ëŠ” %.2f ìž…ë‹ˆë‹¤.\n", width, height, area);
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) CLOSE
+    // ìž¥ì¹˜(íŒŒì¼ í¬ì¸í„°) CLOSE
     fclose(fp);
 
     system("pause");
