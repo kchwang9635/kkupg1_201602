@@ -1,18 +1,18 @@
 /*
-2016-09-21 ½Ç½À 2-2
-¡°2-2-out.txt¡± ÆÄÀÏ¿¡ ¹Øº¯ 213mm ³ôÀÌ 41mm ÀÎ »ï°¢ÇüÀÇ ³ĞÀÌ¸¦ ÀúÀåÇÏ½Ã¿À.
+2016-09-21 ì‹¤ìŠµ 2-2
+â€œ2-2-out.txtâ€ íŒŒì¼ì— ë°‘ë³€ 213mm ë†’ì´ 41mm ì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ë¥¼ ì €ì¥í•˜ì‹œì˜¤.
 */
 
 #include <stdio.h>
 #include <Windows.h>
 int main()
 {
-    // ÀåÄ¡ ¼±¾ğ. (File Pointer)
+    // ì¥ì¹˜ ì„ ì–¸. (File Pointer)
     FILE * fp;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) OPEN
-    //fp = fopen("2-2-out.txt", "w"); /* C Ç¥ÁØ */
-    fopen_s(&fp, "2-2-out.txt", "w"); /* ¸¶ÀÌÅ©·Î ¼ÒÇÁÆ® C ¿¡¼­¸¸ »ç¿ë */
+    // ì¥ì¹˜(íŒŒì¼ í¬ì¸í„°) OPEN
+    //fp = fopen("d:\\2-2-out.txt", "w"); /* C í‘œì¤€ */
+    fopen_s(&fp, "d:\\2-2-out.txt", "w"); /* ë§ˆì´í¬ë¡œ ì†Œí”„íŠ¸ C ì—ì„œë§Œ ì‚¬ìš© */
 
     double height, width, area;
     height = 213.0;
@@ -20,10 +20,10 @@ int main()
 
     area = height * width / 2.0;
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) Á¶ÀÛ : ¾²±â
-    fprintf(fp, "¹Øº¯ÀÌ %.2f mm ÀÌ°í ³ôÀÌ°¡ %.2f mmÀÎ »ï°¢ÇüÀÇ ³ĞÀÌ´Â %.2f mm^2 ÀÔ´Ï´Ù.\n", height, width, area);
+    // ì¥ì¹˜(íŒŒì¼ í¬ì¸í„°) ì¡°ì‘ : ì“°ê¸°
+    fprintf(fp, "ë°‘ë³€ì´ %.2f mm ì´ê³  ë†’ì´ê°€ %.2f mmì¸ ì‚¼ê°í˜•ì˜ ë„“ì´ëŠ” %.2f mm^2 ì…ë‹ˆë‹¤.\n", height, width, area);
 
-    // ÀåÄ¡(ÆÄÀÏ Æ÷ÀÎÅÍ) CLOSE
+    // ì¥ì¹˜(íŒŒì¼ í¬ì¸í„°) CLOSE
     fclose(fp);
 
     system("pause");
