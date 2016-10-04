@@ -21,6 +21,7 @@ int main()
     server_addr.sin_port = htons(80);
     inet_pton(AF_INET, "202.179.177.21", &server_addr.sin_addr); // www.naver.com
 
+    /******************** connect*******************************/
     int rc = connect(client_socket, (struct sockaddr*)&server_addr, sizeof(server_addr));
     if (rc<0)
     {
@@ -28,11 +29,13 @@ int main()
         return 2;
     }
 
+    /******************** send ********************************/
     char tosend[] = "GET / HTTP/1.1\nHOST:www.navrer.com\n\n";
     char buff[4096];
     // +1==string 의 NULL을 포함시키기 위함
     send(client_socket, tosend, strlen(tosend) + 1, 0);
-    printf("sizeof buff= %ld\n\n", sizeof(buff));
+
+    /******************** recv ********************************/
     while (1)
     {
         memset(buff, 0, sizeof(buff));
@@ -41,6 +44,7 @@ int main()
         if (rc == 0) break;
     }
 
+    /******************** close *******************************/
     closesocket(client_socket);
     WSACleanup();
 
