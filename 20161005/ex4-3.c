@@ -1,72 +1,71 @@
 /*
-ÀÓÀÇÀÇ ¼ıÀÚ ¸î °³¸¦ Á¤ÇÏ°í, ±× Æò±ÕÀ» Ãâ·ÂÇÏ½Ã¿À
+ì„ì˜ì˜ ìˆ«ì ëª‡ ê°œë¥¼ ì •í•˜ê³ , ê·¸ í‰ê· ì„ ì¶œë ¥í•˜ì‹œì˜¤
 */
 #include<stdio.h>
 #include<Windows.h>
 #define ARR_SIZE 5
 int main()
 {
-    int num[ARR_SIZE] = { 23, 8, 7, 11, 47 };
-    int ascending[ARR_SIZE], descending[ARR_SIZE];
-    int i, k, temp;
-    /*
-    for (i = 0; i < ARR_SIZE; i++)
-    {
-        ascending[i] = num[i];
-        descending[i] = num[i];
-    }
-    */
-    memcpy(descending, num, ARR_SIZE * sizeof(int));
-    memcpy(ascending, num, ARR_SIZE * sizeof(int));
-    
+	int num[ARR_SIZE] = { 23, 8, 7, 11, 47 };
+	int ascending[ARR_SIZE], descending[ARR_SIZE];
+	int i, k, temp;
+	/*
+	for (i = 0; i < ARR_SIZE; i++)
+	{
+	ascending[i] = num[i];
+	descending[i] = num[i];
+	}
+	*/
+	memcpy(descending, num, ARR_SIZE * sizeof(int));
+	memcpy(ascending, num, ARR_SIZE * sizeof(int));
 
-    // ³»¸²Â÷¼ø
-    for (i = 0; i < ARR_SIZE; i++)
-    {
-        for (k = 0; k < ARR_SIZE - 1; k++)
-        {
-            if (descending[k] < descending[k + 1])
-            {
-                /* À§Ä¡ º¯°æ */
-                temp = descending[k];
-                descending[k] = descending[k + 1];
-                descending[k + 1] = temp;
-            }
-        }
-    }
 
-    // ¿Ã¸²Â÷¼ø
-    for (i = 0; i < ARR_SIZE; i++)
-    {
-        for (k = 0; k < ARR_SIZE - 1; k++)
-        {
-            if (ascending[k] > ascending[k + 1])
-            {
-                /* À§Ä¡ º¯°æ */
-                temp = ascending[k];
-                ascending[k] = ascending[k + 1];
-                ascending[k + 1] = temp;
-            }
-        }
-    }
-    
-    for (i = 0; i < ARR_SIZE; i++)
-    {
-        printf("%d ", num[i]);
-    }
-    printf("¿¡¼­ \n³»¸²Â÷¼ø:");
-    for (i = 0; i < ARR_SIZE; i++)
-    {
-        printf("%d ", descending[i]);
-    }
-    printf("\n¿À¸§Â÷¼ø:");
-    for (i = 0; i < 5; i++)
-    {
-        printf("%d ", ascending[i]);
-    }
-    printf("\n");
-    
-    system("pause");
-    return 0;
+	// ë‚´ë¦¼ì°¨ìˆœ
+	for (i = 0; i < ARR_SIZE-1; i++)
+	{
+		for (k = i; k < ARR_SIZE; k++)
+		{
+			if (descending[i] < descending[k])
+			{
+				/* ìœ„ì¹˜ ë³€ê²½ */
+				temp = descending[k];
+				descending[k] = descending[i];
+				descending[i] = temp;
+			}
+		}
+	}
+
+	// ì˜¬ë¦¼ì°¨ìˆœ
+	for (i = 0; i < ARR_SIZE-1; i++)
+	{
+		for (k = i+1; k < ARR_SIZE; k++)
+		{
+			if (ascending[i] > ascending[k])
+			{
+				/* ìœ„ì¹˜ ë³€ê²½ */
+				temp = ascending[k];
+				ascending[k] = ascending[i];
+				ascending[i] = temp;
+			}
+		}
+	}
+
+	for (i = 0; i < ARR_SIZE; i++)
+	{
+		printf("%d ", num[i]);
+	}
+	printf("ì—ì„œ \në‚´ë¦¼ì°¨ìˆœ:");
+	for (i = 0; i < ARR_SIZE; i++)
+	{
+		printf("%d ", descending[i]);
+	}
+	printf("\nì˜¤ë¦„ì°¨ìˆœ:");
+	for (i = 0; i < 5; i++)
+	{
+		printf("%d ", ascending[i]);
+	}
+	printf("\n");
+
+	system("pause");
+	return 0;
 }
-
