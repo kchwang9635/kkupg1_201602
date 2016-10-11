@@ -1,7 +1,23 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+/*
+HTTP/1.1 200 OK
+Date: Tue, 04 Oct 2016 08:16:52 GMT
+Server: Testa/4.8.6
+Access-Control-Allow-Origin: *
+Last-Modified: Tue, 04 Oct 2016 01:55:40 GMT
+ETag: "11832-5b863f00"
+Accept-Ranges: bytes
+Content-Length: 71730
+Cache-Control: max-age=31536000
+Expires: Wed, 04 Oct 2017 08:16:52 GMT
+Content-Type: image/png
+Age: 2588
 
+...바이너리 데이터...
+*/
+// extract_image(저장된_파일 , 이미지를_추출하여_저장할_파일)
 void extract_image(const char * filename , const char * savefile)
 {
 	int i;
