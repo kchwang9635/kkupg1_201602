@@ -78,3 +78,10 @@ void extract_image(const char * filename , const char * savefile)
 	fclose(fpnew);
 	fclose(fp);
 }
+
+int main()
+{
+	extract_image("sun_banner_org.tmp" , "sun_banner.jpg");
+	system("pause");
+	return 0;
+}
