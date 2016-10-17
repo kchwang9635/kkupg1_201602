@@ -1,3 +1,7 @@
+/*
+linux용 socket 입니다. 참고만 하세요
+*/
+
 /* socket client */
 #include<stdio.h>
 #include<string.h>
