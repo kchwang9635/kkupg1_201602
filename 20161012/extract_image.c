@@ -22,7 +22,7 @@ void extract_image(const char * filename , const char * savefile)
 {
 	int i;
 	FILE * fp, *fpnew;
-	char buff[255] ;
+	char buff[256] ;
 	char * line;
 	const char * content_length_str = "Content-Length:"; // content-length
 	int imgsize = -1;
