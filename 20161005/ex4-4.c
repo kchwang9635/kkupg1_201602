@@ -1,5 +1,5 @@
 /*
-Çà·ÄÀÇ ÀüÄ¡Çà·Ä(transpose)À» Ãâ·ÂÇÏ½Ã¿À.
+ì„ì˜ì˜ ë‘ í–‰ë ¬ì„ ì •í•˜ê³ , í–‰ë ¬ ë§ì…ˆì„ í•˜ì—¬ ì¶œë ¥ í•˜ì‹œì˜¤.
 */
 #include<stdio.h>
 #include<Windows.h>
@@ -13,7 +13,7 @@ int main()
     int result[ROW_SIZE][COL_SIZE];
     int i, k;
 
-    // °è»ê
+    // ê³„ì‚°
     for (i = 0; i < ROW_SIZE; i++)
     {
         for (k = 0; k < COL_SIZE; k++)
@@ -22,7 +22,7 @@ int main()
         }
     }
 
-    // Ãâ·Â
+    // ì¶œë ¥
     printf("m1=\n");
     for (i = 0; i < ROW_SIZE; i++)
     {
