@@ -47,8 +47,8 @@ void extract_image(const char * filename , const char * savefile)
 		{
 			if (strstr(line, content_length_str) != NULL)
 			{
-				// 1) content - length 값
-				// "Content - Length: 71730" 에서 imagesize = 71730
+				// 1) content-length 값
+				// "Content-Length: 71730" 에서 imagesize = 71730
 				imgsize = atoi(line + strlen(content_length_str));
 			}
 		}
