@@ -4,11 +4,11 @@
 int main()
 {
     char buff[256];
-    GetPrivateProfileString("±¸±¸´Ü", "keyvalue", "" , buff, sizeof(buff) , "e:\\ini.ini");
+    GetPrivateProfileString("êµ¬êµ¬ë‹¨", "keyvalue", "" , buff, sizeof(buff) , "e:\\ini.ini");
     if (strcmp(buff, "") == 0)
     {
-        WritePrivateProfileString("±¸±¸´Ü", "keyvalue", "defalut-value", "e:\\ini.ini");
-        GetPrivateProfileString("±¸±¸´Ü", "keyvalue", "", buff, sizeof(buff), "e:\\ini.ini");
+        WritePrivateProfileString("êµ¬êµ¬ë‹¨", "keyvalue", "defalut-value", "e:\\ini.ini");
+        GetPrivateProfileString("êµ¬êµ¬ë‹¨", "keyvalue", "", buff, sizeof(buff), "e:\\ini.ini");
     }
     printf("%s\n", buff);
 
