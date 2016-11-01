@@ -34,7 +34,7 @@ int main()
             if (strncmp(buff , key, strlen(key)) == 0)
             {
                 char c = *(buff + strlen(key));
-                // isspace "°ø¹é , ÁÙ¹Ù²Ş, ÅÇ"  ¿©ºÎ È®ÀÎ
+                // isspace "ê³µë°± , ì¤„ë°”ê¿ˆ, íƒ­"  ì—¬ë¶€ í™•ì¸
                 if (c==' ' || c == '\t' || c == '=' )
                 {
                     printf("key found!!!\n");
