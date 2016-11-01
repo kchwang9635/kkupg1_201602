@@ -7,20 +7,20 @@ int main()
     char buff[256];
     FILE * fp;
     const char INI_FILE[] = "e:\\ex6-2.ini";
-    GetPrivateProfileString("±¸±¸´Ü", "´Ü", "", buff, sizeof(buff), INI_FILE);
+    GetPrivateProfileString("êµ¬êµ¬ë‹¨", "ë‹¨", "", buff, sizeof(buff), INI_FILE);
     if (strcmp(buff, "") == 0)
     {
-        WritePrivateProfileString("±¸±¸´Ü", "´Ü",  "8", INI_FILE);
-        WritePrivateProfileString("±¸±¸´Ü", "output", "0", INI_FILE);
+        WritePrivateProfileString("êµ¬êµ¬ë‹¨", "ë‹¨",  "8", INI_FILE);
+        WritePrivateProfileString("êµ¬êµ¬ë‹¨", "output", "0", INI_FILE);
     }
-    GetPrivateProfileString("±¸±¸´Ü", "´Ü", "", buff, sizeof(buff), INI_FILE);
+    GetPrivateProfileString("êµ¬êµ¬ë‹¨", "ë‹¨", "", buff, sizeof(buff), INI_FILE);
     dan = atoi(buff);
-    GetPrivateProfileString("±¸±¸´Ü", "output", "", buff, sizeof(buff), INI_FILE);
+    GetPrivateProfileString("êµ¬êµ¬ë‹¨", "output", "", buff, sizeof(buff), INI_FILE);
     output = atoi(buff);
 
     switch (output)
     {
-    case 1: // 0 È­¸é, 1 txt
+    case 1: // 0 í™”ë©´, 1 txt
         fopen_s(&fp, "e:\\ex6-2.txt", "w");
         break;
     default:
@@ -29,13 +29,13 @@ int main()
 
     for (i = 1; i < 10; i++)
     {
-        // 0 È­¸é, 1 txt
+        // 0 í™”ë©´, 1 txt
         switch (output)
         {
-        case 0: // 0 È­¸é, 1 txt
+        case 0: // 0 í™”ë©´, 1 txt
             printf("%d * %d = %d\n", dan, i, dan * i);
             break;
-        case 1: // 0 È­¸é, 1 txt
+        case 1: // 0 í™”ë©´, 1 txt
             fprintf(fp , "%d * %d = %d\n", dan, i, dan * i);
             break;
         default:
@@ -46,7 +46,7 @@ int main()
 
     switch (output)
     {
-    case 1: // 0 È­¸é, 1 txt
+    case 1: // 0 í™”ë©´, 1 txt
         fclose(fp);
         break;
     default:
